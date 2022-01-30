@@ -1,6 +1,10 @@
 .different{
     margin-top: 27rem;
 
+    @include breakpoint-down(medium){
+        margin-top:20rem;
+    }
+
 
 
     >div:first-child{
@@ -117,11 +121,10 @@
     position: relative;
 
 
-
     @include breakpoint-down(medium){
+        margin-top: 7rem;
         width:80%
     }
-
 
     
     @include breakpoint-down(medium){
@@ -173,8 +176,9 @@
         
         >div{
             font-family: 'DM Serif Display', serif;
-            flex-basis: 38%;
+            flex-basis: 50%;
             font-size: 3.5rem;
+            padding-right:7rem;
 
 
             @include breakpoint-down(medium){
@@ -184,6 +188,7 @@
             @include breakpoint-down(small){
                flex-basis: 100%;
                font-size: 2.5rem;
+               padding-right: 0rem;
             //    padding-top: 5rem;
             }
         }
@@ -194,6 +199,13 @@
             padding: 1rem 4rem;
             text-transform: uppercase;
             font-size: 0.9rem;
+            // z-index:1;
+
+            &:hover{
+                background:$white;
+                color:$VeryDarkViolet;
+                font-weight:800;
+            }
 
             @include breakpoint-down(medium){
                 padding: 0.6rem 2rem;

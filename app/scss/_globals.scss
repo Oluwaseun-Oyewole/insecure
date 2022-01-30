@@ -11,7 +11,7 @@ html{
 body{
 
 
-    height:400vh;
+    // height:400vh;
 
     padding:0;
     margin:0;
@@ -67,7 +67,7 @@ ul{
 
 .container{
 
-    max-width: 1540px;
+    max-width: 1440px;
     margin: 0 auto;
 
     // padding: 0 20rem;
@@ -95,7 +95,7 @@ ul{
     padding:0.75rem 1.9rem;
     border: 3px $DarkGrayishViolet solid;
     color: $DarkViolet;
-   
+    z-index:99;
 
 }
 // visibility

@@ -189,10 +189,10 @@
         background: url('/images/bg-pattern-footer-desktop.svg') no-repeat;
         top:0;
         left:0;
-        width:50%;
-        height:350px;
-        // height:100%;
-        background-size:60%;
+        width:100%;
+        height:100%;
+        background-size:31%;
+        // background-size:contain;
 
 
         @include breakpoint-down(small){
