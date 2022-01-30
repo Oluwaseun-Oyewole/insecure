@@ -4,9 +4,11 @@ link1 = document.querySelector('.mobile >a:first-child')
 link2 = document.querySelector('.mobile >a:nth-child(2)')
 link3 = document.querySelector('.mobile>a:nth-child(3)')
 link4 = document.querySelector('.mobile>a:last-child')
-console.log(link4)
+body  = document.querySelector('body')
+
 
 hambuggerBtn.addEventListener('click', () => {
+    
     if(mobileBtn.classList.contains('mobileSlideIn')){
         hambuggerBtn.src = '/images/icon-hamburger.svg'
         mobileBtn.classList.remove('mobileSlideIn')
@@ -18,7 +20,8 @@ hambuggerBtn.addEventListener('click', () => {
         link2.classList.remove('link2')
         link3.classList.remove('link2')
         link4.classList.remove('link4')
-        
+       
+        body.classList.remove('noscroll')
 
 
     }
@@ -34,5 +37,7 @@ hambuggerBtn.addEventListener('click', () => {
         link2.classList.add('link2')
         link3.classList.add('link2')
         link4.classList.add('link4')
+        
+        body.classList.add('noscroll')
     }
 })

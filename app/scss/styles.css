@@ -356,6 +356,8 @@ ul {
   }
   .header__mobilemenu a:last-child:hover {
     border: 2px red solid;
+    background: red;
+    color: black;
     -webkit-transition: all linear ease-in-out;
     transition: all linear ease-in-out;
   }
@@ -531,9 +533,9 @@ ul {
 
 @media (max-width: 63.9375em) {
   .section__content p {
-    font-size: 1.1rem;
-    line-height: 2.1rem;
-    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+    padding: 1rem 5rem;
   }
 }
 
@@ -560,13 +562,13 @@ ul {
 @media (max-width: 63.9375em) {
   .section__content::before {
     background: url("/images/bg-pattern-intro-left-mobile.svg") no-repeat;
-    width: 100%;
+    width: 50%;
     height: 100%;
     background-position: left;
-    top: 0;
+    top: 1%;
     left: 0;
     right: 0;
-    background-size: 40%;
+    background-size: 90%;
   }
 }
 
@@ -588,13 +590,12 @@ ul {
     content: '';
     position: absolute;
     background: url("/images/bg-pattern-intro-right-mobile.svg") no-repeat;
-    width: 100%;
+    width: 65%;
     height: 100%;
     background-position: right;
     background-size: 70%;
     background-size: 35%;
-    left: 0;
-    top: 70%;
+    top: 60%;
     right: 0;
   }
 }
@@ -685,6 +686,12 @@ ul {
 }
 
 @media (max-width: 63.9375em) {
+  .different {
+    margin-top: 10rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
   .different {
     margin-top: 20rem;
   }
@@ -855,16 +862,9 @@ ul {
 
 @media (max-width: 63.9375em) {
   .work > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 3rem 6rem;
+    padding: 5rem 6rem;
+    display: block;
+    text-align: center;
   }
 }
 
@@ -899,7 +899,10 @@ ul {
 
 @media (max-width: 63.9375em) {
   .work > div > div {
-    font-size: 2.2rem;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    font-size: 2.5rem;
+    padding-right: 0rem;
   }
 }
 
@@ -929,6 +932,7 @@ ul {
 @media (max-width: 63.9375em) {
   .work > div a {
     padding: 0.6rem 2rem;
+    margin-top: 3.5rem;
   }
 }
 
@@ -941,10 +945,6 @@ ul {
     font-size: 0.9rem;
     font-weight: 200;
   }
-}
-
-.work > div__cta {
-  background: green;
 }
 
 .footer {
