@@ -70,6 +70,8 @@ ul {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  max-width: 69.375rem;
+  margin: 0 auto;
 }
 
 .container--plr {
@@ -92,7 +94,7 @@ ul {
 .button {
   display: inline-block;
   padding: 0.75rem 1.9rem;
-  border: 3px #837d87 solid;
+  border: 2px #837d87 solid;
   color: #2d2640;
   z-index: 99;
 }
@@ -276,17 +278,19 @@ ul {
 
 .header__links > ul > li > a {
   font-family: 'Karla', sans-serif;
-  font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
   color: #95a9c6;
   color: #837d87;
+  font-size: 0.7rem;
 }
 
 .header__links ul:last-child li:last-child > a {
   font-size: 0.9rem;
   color: #2d2640;
   font-weight: 700;
+  font-size: 0.7rem;
+  padding: 0.5rem 1.4rem;
 }
 
 .header__links ul:last-child li:last-child > a:hover {
@@ -447,9 +451,25 @@ ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .section::after {
+    content: '';
+    position: absolute;
+    background: url("/images/bg-pattern-intro-left-mobile.svg") no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position: left;
+    background-size: 65%;
+    top: -5%;
+    right: 0;
+    left: 0;
+    z-index: -1;
   }
 }
 
@@ -465,7 +485,6 @@ ul {
         -ms-flex-order: 2;
             order: 2;
     text-align: center;
-    margin-top: 7rem;
     width: 100%;
     margin-left: 1rem;
     padding-bottom: 6.5rem;
@@ -478,10 +497,9 @@ ul {
         -ms-flex-order: 2;
             order: 2;
     text-align: center;
-    margin-top: 7rem;
     width: 100%;
     margin-left: 1rem;
-    padding-bottom: 6.5rem;
+    padding-bottom: 9.5rem;
   }
 }
 
@@ -489,6 +507,7 @@ ul {
   width: 30%;
   height: 2px;
   background: #95a9c6;
+  margin-top: -4rem;
 }
 
 @media (max-width: 63.9375em) {
@@ -500,7 +519,7 @@ ul {
 .section__content h1 {
   font-size: 6rem;
   padding-right: 2rem;
-  font-size: 5.5rem;
+  font-size: 4rem;
   font-family: 'DM Serif Display', serif;
   font-weight: 200;
   line-height: 1;
@@ -526,7 +545,7 @@ ul {
   margin-top: -1.4rem;
   line-height: 2;
   padding-bottom: -2rem;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   color: #fafafa;
   padding-bottom: 1rem;
 }
@@ -551,37 +570,25 @@ ul {
   content: "";
   position: absolute;
   background: url("/images/bg-pattern-intro-left-desktop.svg") no-repeat;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  bottom: -70%;
-  left: -5%;
-  left: -4%;
-  background-size: 30%;
+  bottom: -72%;
+  left: 0;
+  background-size: contain;
+  background-size: 13%;
 }
 
 @media (max-width: 63.9375em) {
   .section__content::before {
+    display: none;
     background: url("/images/bg-pattern-intro-left-mobile.svg") no-repeat;
     width: 50%;
     height: 100%;
     background-position: left;
-    top: 1%;
-    left: 0;
-    right: 0;
-    background-size: 90%;
-  }
-}
-
-@media (max-width: 39.9375em) {
-  .section__content::before {
-    background: url("/images/bg-pattern-intro-left-mobile.svg") no-repeat;
-    width: 70%;
-    height: 100%;
-    background-size: contain;
-    background-position: left;
     top: 0;
     left: 0;
     right: 0;
+    background-size: 90%;
   }
 }
 
@@ -605,12 +612,11 @@ ul {
     content: '';
     position: absolute;
     background: url("/images/bg-pattern-intro-right-mobile.svg") no-repeat;
-    width: 100%;
+    width: 40%;
     height: 100%;
     background-position: right;
-    background-size: 70%;
-    background-size: 50%;
-    left: 0;
+    background-size: 40%;
+    background-size: contain;
     top: 60%;
     right: 0;
   }
@@ -619,10 +625,11 @@ ul {
 .section__image {
   background: url("/images/image-intro-desktop.jpg") no-repeat;
   width: 53%;
-  height: 95vh;
+  min-height: 110vh;
   background-size: cover;
   position: relative;
-  top: 12rem;
+  background-position: right;
+  top: 8rem;
 }
 
 @media (max-width: 63.9375em) {
@@ -633,19 +640,22 @@ ul {
     width: 100%;
     top: 0;
     background-position: center;
-    height: 40vh;
+    height: 30vh;
   }
 }
 
 @media (max-width: 39.9375em) {
   .section__image {
+    min-height: 0;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
     width: 100%;
     top: 0;
-    background-position: center;
-    height: 40vh;
+    background-position: top;
+    background-size: cover;
+    background-size: 100%;
+    height: 60vh;
   }
 }
 
@@ -653,7 +663,8 @@ ul {
   border: 2.5px #fafafa solid;
   color: #fff;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
+  padding: 0.6rem 3.5rem;
 }
 
 .section a:hover {
@@ -674,15 +685,30 @@ ul {
   height: 900px;
   height: 100%;
   right: 0;
-  bottom: 0%;
-  top: 0;
-  background-position: top -150% right;
+  background-position: top  right;
   background-size: 70%;
   z-index: 1;
 }
 
+@media (max-width: 63.9375em) {
+  .section::before {
+    display: none;
+  }
+}
+
+.section .test {
+  background: red;
+  color: white;
+}
+
+.section .test > img {
+  width: 50%;
+  height: 200px;
+  width: 200px;
+}
+
 .different {
-  margin-top: 27rem;
+  margin-top: 15rem;
 }
 
 @media (max-width: 63.9375em) {
@@ -693,7 +719,7 @@ ul {
 
 @media (max-width: 39.9375em) {
   .different {
-    margin-top: 20rem;
+    margin-top: 13rem;
   }
 }
 
@@ -701,7 +727,7 @@ ul {
   background: #95a9c6;
   width: 15%;
   height: 1.5px;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 }
 
 @media (max-width: 63.9375em) {
@@ -723,7 +749,7 @@ ul {
 }
 
 .different__first {
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-family: 'DM Serif Display', serif;
   font-weight: 300;
 }
@@ -743,7 +769,7 @@ ul {
 }
 
 .different__content {
-  padding-top: 6rem;
+  padding-top: 4rem;
 }
 
 @media (max-width: 63.9375em) {
@@ -772,7 +798,7 @@ ul {
 }
 
 .different__content img {
-  width: 100px;
+  width: 70px;
 }
 
 @media (max-width: 39.9375em) {
@@ -783,13 +809,13 @@ ul {
 
 .different__content h3 {
   font-family: 'DM Serif Display', serif;
-  font-size: 2.3rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
 .different__content p {
-  margin-top: -1rem;
-  font-size: 1.3rem;
+  margin-top: -0.6rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: #837d87;
 }
@@ -816,7 +842,7 @@ ul {
 }
 
 .work {
-  margin-top: 10rem;
+  margin-top: 7rem;
   background: #2d2640;
   color: white;
   position: relative;
@@ -857,7 +883,7 @@ ul {
 }
 
 .work > div {
-  padding: 6rem 7rem;
+  padding: 3rem 7rem;
 }
 
 @media (max-width: 63.9375em) {
@@ -893,8 +919,8 @@ ul {
   font-family: 'DM Serif Display', serif;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  font-size: 3.5rem;
-  padding-right: 7rem;
+  font-size: 3rem;
+  padding-right: 1rem;
 }
 
 @media (max-width: 63.9375em) {
@@ -1000,7 +1026,7 @@ ul {
 }
 
 .footer__socials {
-  font-size: 30px;
+  font-size: 22px;
 }
 
 @media (max-width: 63.9375em) {
@@ -1063,7 +1089,7 @@ ul {
 .footer__links h3 {
   color: #837d87;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
 }
 
@@ -1095,7 +1121,7 @@ ul {
 }
 
 .footer ul > li {
-  padding-bottom: 1.3rem;
+  padding-bottom: 0.7rem;
 }
 
 @media (max-width: 39.9375em) {
@@ -1108,7 +1134,7 @@ ul {
   text-transform: uppercase;
   color: #2d2640;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   letter-spacing: 0.07rem;
   font-family: Karla, sans-serif;
   font-weight: 600;
@@ -1126,11 +1152,11 @@ ul {
   content: '';
   position: absolute;
   background: url("/images/bg-pattern-footer-desktop.svg") no-repeat;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-size: 31%;
+  background-size: 40%;
+  background-position: left top;
+  left: -5%;
 }
 
 @media (max-width: 39.9375em) {
